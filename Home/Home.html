@@ -180,60 +180,66 @@
     });
 
     //experience
-    fetch("experience.json")
-        .then(response => response.json())
-        .then(data => {
-            const experienceSection = document.querySelector(".experience");
-            data.forEach(post => {
-                const postElement = document.createElement("div");
-                postElement.className = "experience-item";
-                experienceSection.innerHTML = `
-                        <div class="image-wrapper">
-                         <img src="${post.image}">
-                        </div>
-                        <div class="content">
-                            <div class="content-section-wrapper">
-                                <div class="my-experience">
-                                    <h1>${post.title}</h1>
-                                    <p>${post.body}</p>
-                                </div>
-                                <div class="experience-section">
-                                <div class="web-developer">
-                                    <div class="icon">
-                                        <i class="fas fa-desktop"></i>
-                                    </div>
-                                    <div class="graduation-content-wrapper">
-                                        <div class="web-developer-wrapper">
-                                        <h2>${post.webDeveloper.title}</h2>
-                                        <div class="date-wrapper">
-                                      <h3>  ${post.webDeveloper.date}</h3>
-                                        </div>
-                                        </div>
-                                        <p>${post.webDeveloper.description}</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="ui-engineer">
-                                    <div class="icon">
-                                        <i class="fas fa-desktop"></i>
-                                    </div>
-                                    <div class="graduation-content-wrapper">
-                                        <div class="web-developer-wrapper">
-                                        <h2>${post.uiEngineer.title}</h2>
-                                        <div class="date-wrapper">
-                                      <h3>  ${post.uiEngineer.date}</h3>
-                                        </div>
-                                        </div>
-                                        <p>${post.uiEngineer.description}</p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-            })
-        })
-        .catch(error => console.error("Error fetching experience data:", error));
+fetch("experience.json")
+  .then(response => response.json())
+  .then(data => {
+    const experienceSection = document.querySelector(".experience");
+
+    data.forEach(post => {
+      experienceSection.innerHTML = `
+        <div class="image-wrapper">
+          <img src="${post.image}" alt="Experience Image">
+        </div>
+
+        <div class="content">
+          <div class="content-section-wrapper">
+            <div class="my-experience">
+              <h1>${post.title}</h1>
+              <p>${post.body}</p>
+            </div>
+
+            <div class="experience-section">
+
+              <div class="experience-item">
+                <div class="icon">
+                  <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <div class="graduation-content-wrapper">
+                  <h2>${post.uiuxIntern.title}</h2>
+                  <h3>${post.uiuxIntern.date}</h3>
+                  <p>${post.uiuxIntern.description}</p>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="graduation-content-wrapper">
+                  <h2>${post.frontendViprata.title}</h2>
+                  <h3>${post.frontendViprata.date}</h3>
+                  <p>${post.frontendViprata.description}</p>
+                </div>
+              </div>
+
+              <div class="experience-item">
+                <div class="icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="graduation-content-wrapper">
+                  <h2>${post.frontendGlobalConnect.title}</h2>
+                  <h3>${post.frontendGlobalConnect.date}</h3>
+                  <p>${post.frontendGlobalConnect.description}</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  })
+  .catch(error => console.error("Error fetching experience data:", error));
 
     // const educationdata = "education.json"
     // fetch("educationdata");
@@ -257,12 +263,15 @@
 <body>
     <!--header section starts-->
     <div class="header-section">
+        <a href="/Home/Home.html">
+            <h1>Home</h1>
+        </a>
         <a href="/featured-works/featured-works.html">
-            <h1>Works</h1>
+            <h1>Experience</h1>
         </a>
-        <a href="/blog/blog.html">
+        <!-- <a href="/blog/blog.html">
             <h1>Blogs</h1>
-        </a>
+        </a> -->
         <a href="/contact/contactus.html">
             <h1>Contact</h1>
         </a>
@@ -274,11 +283,7 @@
         <div class="content-wrapperr">
             <h1>Hi, I am Gayathri Immidisetti,
                 FrontEnd Developer</h1>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat Velit
-                officia consequat
-                duis
-                enim
-                velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <p>Ever since I wrote my first line of code, I’ve been fascinated by how design and logic blend together to create something impactful. Today, as a Frontend Developer, I transform concepts into interactive and meaningful web experiences.</p>
             <a href="/Assets/resume.pdf" download="resume">
                 <button type="submit" value="submit" class="mybutton">
                     Download Resume
@@ -294,12 +299,17 @@
         <div class="about">
             <div class="about-section-wrapper">
                 <h1>Objective</h1>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, vero! Quod, mollitia sint eum,
-                    veritatis molestias animi aut in</p>
-                <p> autem et nobis temporibus aspernatur. Magni nihil nemo in sunt
-                    suscipit vero! Quod, mollitia sint eum.</p>
-            </div>
+                <h3>Building digital experiences with creativity and precision</h3>
+      <p>
+        As a passionate Frontend Developer, my objective is to design and build
+        visually engaging, user-focused, and high-performing web interfaces.
+      </p>
+      <p>
+        I strive to turn creative concepts into seamless digital experiences
+        using modern tools like React, JavaScript, and Flutter, while
+        continuously learning and evolving with new technologies.
+      </p>
+           </div>
         </div>
         <div class="image-section-wrapper">
             <img src="/Assets/laptop.jpg">
@@ -371,7 +381,7 @@
     <!-- education/experience-section ends -->
 
     <!--Recent post section starts-->
-    <div class="recent-section" id="blog-1">
+    <!-- <div class="recent-section" id="blog-1">
         <div class="content-wrapper">
             <h1>Recent posts </h1>
             <a href="/blog/blog.html">View all
@@ -379,11 +389,11 @@
         </div>
         <div class="recent-wrapper">
         </div>
-    </div>
+    </div> -->
     <!--Recent post section end-->
 
     <!--featured section starts-->
-    <div class="featured-section" id="featured-section-1">
+    <!-- <div class="featured-section" id="featured-section-1">
         <div class="content-wrapper">
             <h3>Featured works</h3>
             <a href="/featured-works/featured-works.html">View all<i class="fa-solid fa-arrow-right"></i></a>
@@ -391,7 +401,7 @@
         <div class="featured-wrapper" style="display: flex;">
 
         </div>
-    </div>
+    </div> -->
     <!--featuredworks ends-->
 
     <!-- contact section starts -->
@@ -443,10 +453,10 @@
 
             <h2>contact</h2>
             <a href="tel:+4733378901">
-                <p class="telephone-wrapper"><i class="fa-solid fa-phone"></i>+8383987739789</p>
+                <p class="telephone-wrapper"><i class="fa-solid fa-phone"></i>7680980757</p>
             </a>
             <a href="mailto:someone@example.com">
-                <p class="mail-wrapper"><i class="fa-regular fa-envelope"></i>gayathri@gmail.com</p>
+                <p class="mail-wrapper"><i class="fa-regular fa-envelope"></i>imgayathri1234@gmail.com</p>
             </a>
             <p class="company-wrapper"><i class="fa-solid fa-globe"></i>Company.co</p>
             <a href="/Assets/resume.pdf" download="resume">

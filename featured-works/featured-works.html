@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured Works</title>
+    <title>Experience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,107 +12,98 @@
         rel="stylesheet">
     <link rel="stylesheet" href="featured.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<script>
-    let featureddata = "https://jsonplaceholder.typicode.com/photos";
-
-    fetch(featureddata)
-        .then(response => response.json())
-        .then(data => {
-            const sliceData = data.slice(0, 10);
-            console.log(sliceData);
-            const featuredsection = document.querySelector(".featured-wrapper");
-            document.getElementsByClassName("blog-section").innerHTML = sliceData;
-
-            sliceData.forEach(post => {
-                const postElement = document.createElement("div");
-
-                postElement.className = "featured-works"
-
-                postElement.innerHTML = `
-               
-               <img src=${post.thumbnailUrl}/>  
-         
-                <div class="featured-wrapper-content">
-                    <h1 class="featured-title">${post.title}</h1>
-                    <div class="featured-works-wrapper">
-                    <h2 class="featured-date">${new Date(post.id).toDateString()}</h2><div class="vertical-line"></div>  <h4>Express Handlebars</h4></h4></div>
-                    <p class="featured-para">quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est </p>
-                
-                  </div> 
-               
-                  </div>
-                 `;
-                featuredsection.appendChild(postElement);
-            });
-        })
-        .catch(error => console.error("Error fetching data:", error));
-
-    // Wait for the DOM to fully load before running the JavaScript
-    document.addEventListener('DOMContentLoaded', function () {
-        const topscroll = document.getElementById("up-chevron");
-
-        window.onscroll = function scroll() {
-            if (document.documentElement.scrollTop > 200) {
-                topscroll.style.display = "block";
-            } else {
-                topscroll.style.display = "none";
-            }
-
-        }
-    });
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topscrollbutton() {
-        document.documentElement.scrollTop = 0;
-    }
-
-</script>
 
 <body>
     <div class="header-section">
+        <a href="/Home/Home.html">
+            <h1>Home</h1>   
+        </a>
         <a href="/works/works.html">
-            <h1>Works</h1>
+            <h1>Experience</h1>
         </a>
-        <a href="/blog/blog.html">
+        <!-- <a href="/blog/blog.html">
             <h1>Blogs</h1>
-        </a>
+        </a> -->
         <a href="/contact/contactus.html">
             <h1>Contact</h1>
         </a>
     </div>
-    <a href="/Home/Home.html">
 
-        <h6 class="arrow-left-wrapper"> <i class="fa-solid fa-arrow-left"></i> Back to home</h6>
-    </a>
-    <div class="featured-section" id="featured-section-1">
-        <h3 class="title">Works</h3>
-        <a href="/works/works.html">
-            <div class="featured-wrapper">
-
-
-            </div>
-        </a>
-
+   
+    <div class="featured-section" id="experience-section">
+        <h3 class="title">Experience</h3>
+        <div class="featured-wrapper"></div>
     </div>
+
     <a href="mailto:someone@example.com">
         <div class="call-icon">
             <i class="fa-solid fa-envelope"></i>
         </div>
     </a>
-    <button onclick="topscrollbutton()" id="up-chevron"><i class="fa-solid fa-chevron-up"></i></button>
-    <!--footer section starts-->
-    <div class="footer-section">
-        <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f"></i> <a
-                href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> <a
-                    href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> <a
-                        href="https://www.Linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <p>Copyright ©2023.All rights reserved. </p>
-    </div>
-    <!--footer section ends-->
 
+    <button onclick="topscrollbutton()" id="up-chevron"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <div class="footer-section">
+        <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <p>Copyright ©2025. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Static Experience Data
+        const experienceData = [
+            {
+                "company": "Tavant Technologies, Bangalore",
+                "role": "UI/UX Design Intern",
+                "date": "Aug 2023 - Nov 2023",
+                "description": "Worked on creating responsive UI layouts, improving design accessibility, and collaborating with developers to enhance front-end design consistency."
+            },
+            {
+                "company": "Viprata Technologies, Hyderabad",
+                "role": "Frontend Developer",
+                "date": "Sep 2023 - Mar 2024",
+                "description": "Developed dynamic web pages using HTML, CSS, and React. Collaborated with backend teams to integrate REST APIs and optimize UI performance."
+            },
+            {
+                "company": "Global Connect Business Solutions, Hyderabad",
+                "role": "Frontend Developer",
+                "date": "Jun 2024 - Present",
+                "description": "Currently building scalable front-end systems using React and Material UI. Focused on improving user experience and mobile responsiveness."
+            }
+        ];
+
+        const experienceWrapper = document.querySelector(".featured-wrapper");
+
+        experienceData.forEach(exp => {
+            const expElement = document.createElement("div");
+            expElement.className = "featured-works"; // reusing the same UI class
+            expElement.innerHTML = `
+                <div class="featured-wrapper-content">
+                    <h1 class="featured-title">${exp.role} - ${exp.company}</h1>
+                    <div class="featured-works-wrapper">
+                        <h2 class="featured-date"><i class="fa-solid fa-calendar-days"></i> ${exp.date}</h2>
+                    </div>
+                    <p class="featured-para">${exp.description}</p>
+                </div>
+            `;
+            experienceWrapper.appendChild(expElement);
+        });
+
+        // Scroll to top button
+        document.addEventListener('DOMContentLoaded', function () {
+            const topscroll = document.getElementById("up-chevron");
+            window.onscroll = function () {
+                topscroll.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+            }
+        });
+
+        function topscrollbutton() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>

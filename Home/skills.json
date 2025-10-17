@@ -10,9 +10,14 @@
         "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ut suscipit "
     },
     {
-        "icon": "fa-brands fa-css3-alt",
-        "title": "styling",
-        "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ut suscipit"
+        "icon": "fa-brands fa-git-alt",
+        "title": "Version control(Github)",
+        "body": "Managing and collaborating on projects efficiently using Git and GitHub to maintain clean, trackable codebases."
+    },
+    {
+        "icon": "fa-solid fa-plug",
+        "title": "API Integration",
+        "body": "Connecting frontends with backend APIs using REST, ensuring seamless data flow and real-time updates."
     },
     {
         "icon": "fa-brands fa-html5",

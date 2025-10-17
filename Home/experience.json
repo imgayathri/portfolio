@@ -2,16 +2,21 @@
     {
         "image": "/Assets/computer.webp",
         "title": "My Experience",
-        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit  ",
-        "webDeveloper": {
-            "title": "Web Developer",
-            "date": "2021 Feb -2022 Oct",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
-        },
-        "uiEngineer": {
-            "title": "UI Engineer ",
-            "date": "2017 June - 2020 Oct",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-        }
+        "body": "My professional journey has allowed me to work on diverse projects across UI/UX design and Frontend development. I’ve collaborated with teams to create responsive, user-centered, and visually appealing web applications using modern technologies.",
+        "uiuxIntern": {
+      "title": "UI/UX Design Intern – Tavant Technologies, Bangalore",
+      "date": "Aug 2023 - Nov 2023",
+      "description": "Worked closely with the design and development teams to create interactive, user-friendly interfaces. Gained hands-on experience in wireframing, prototyping, and implementing UI components that enhance user engagement."
+    },
+        "frontendViprata": {
+      "title": "Frontend Developer – Viprata Technologies, Hyderabad",
+      "date": "Sep 2023 - Mar 2024",
+      "description": "Developed responsive web interfaces using React, HTML, CSS, and JavaScript. Collaborated on dynamic projects focusing on performance optimization, clean UI design, and seamless user experience."
+    },
+     "frontendGlobalConnect": {
+      "title": "Frontend Developer – Global Connect Business Solutions, Hyderabad",
+      "date": "Jun 2024 - Present",
+      "description": "Building and maintaining scalable frontend applications with modern frameworks. Responsible for integrating APIs, implementing reusable components, and ensuring high-quality, accessible design across devices."
+    }
     }
 ]

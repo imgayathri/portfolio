@@ -1,17 +1,17 @@
 [
-    {
-        "image": "/Assets/education.jpg",
-        "title": "My Education",
-        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "postGraduation": {
-            "title": "Masters of Computer Application ",
-            "date": "2021 Feb - 2022 Oct",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-        },
-        "graduation": {
-            "title": "Bachelor of Science",
-            "date": "2017 June - 2020 Oct",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-        }
+  {
+    "image": "/Assets/education.jpg",
+    "title": "My Education",
+    "body": "My educational journey has helped me build a strong foundation in computer science, programming, and web technologies. Through hands-on learning and real-world projects, I’ve developed a passion for creating efficient and user-friendly digital experiences.",
+    "postGraduation": {
+      "title": "Master of Computer Applications (MCA)",
+      "date": "Feb 2021 - Apr 2023",
+      "description": "Specialized in Frontend Development and Web Technologies, focusing on modern frameworks like React, JavaScript, and Flutter. Gained in-depth knowledge of software development, data structures, and application design."
+    },
+    "graduation": {
+      "title": "Bachelor of Science (Computer Science)",
+      "date": "Jun 2017 - Oct 2020",
+      "description": "Built a strong foundation in programming, algorithms, and database management. Developed a keen interest in front-end design and coding best practices during academic projects."
     }
+  }
 ]

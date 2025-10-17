@@ -2,6 +2,47 @@ body {
     margin: 0;
 }
 
+.banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.content-wrapperr {
+    max-width: 55%;
+}
+
+.profile-image {
+    width: 30%;
+    height: auto;
+    border-radius: 50%; /* Rounded corners */
+    margin-left: 30px;   /* Space between text and image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+    padding: 5px; /* Small inner spacing around image */
+    object-fit: cover; /* Keeps the image proportionate */
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+    .banner-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-wrapperr {
+        max-width: 100%;
+    }
+
+    .profile-image {
+        width: 60%;
+        margin: 20px 0;
+    }
+}
+
+
 .header-section {
     display: flex;
     justify-content: flex-end;

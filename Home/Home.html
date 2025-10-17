@@ -180,13 +180,13 @@
     });
 
     //experience
-fetch("experience.json")
-  .then(response => response.json())
-  .then(data => {
-    const experienceSection = document.querySelector(".experience");
+    fetch("experience.json")
+        .then(response => response.json())
+        .then(data => {
+            const experienceSection = document.querySelector(".experience");
 
-    data.forEach(post => {
-      experienceSection.innerHTML = `
+            data.forEach(post => {
+                experienceSection.innerHTML = `
         <div class="image-wrapper">
           <img src="${post.image}" alt="Experience Image">
         </div>
@@ -237,9 +237,9 @@ fetch("experience.json")
           </div>
         </div>
       `;
-    });
-  })
-  .catch(error => console.error("Error fetching experience data:", error));
+            });
+        })
+        .catch(error => console.error("Error fetching experience data:", error));
 
     // const educationdata = "education.json"
     // fetch("educationdata");
@@ -279,20 +279,22 @@ fetch("experience.json")
     <!--header section ends-->
 
     <!--banner section starts-->
-   <div class="banner-section">
-    <div class="content-wrapperr">
-        <h1>Hi, I am Gayathri Immidisetti,
-            FrontEnd Developer</h1>
-        <p>Ever since I wrote my first line of code, I’ve been fascinated by how design and logic blend together to create something impactful. Today, as a Frontend Developer, I transform concepts into interactive and meaningful web experiences.</p>
-        <a href="/Assets/Gayathri FrontEnd Resume.pdf" download="Gayathri FrontEnd Resume">
-            <button type="submit" value="submit" class="mybutton">
-                Download Resume
-            </button>
-        </a>
-    </div>
+    <div class="banner-section">
+        <div class="content-wrapperr">
+            <h1>Hi, I am Gayathri Immidisetti,
+                FrontEnd Developer</h1>
+            <p>Ever since I wrote my first line of code, I’ve been fascinated by how design and logic blend together to
+                create something impactful. Today, as a Frontend Developer, I transform concepts into interactive and
+                meaningful web experiences.</p>
+            <a href="/Assets/Gayathri FrontEnd Resume.pdf" download="Gayathri FrontEnd Resume">
+                <button type="submit" value="submit" class="mybutton">
+                    Download Resume
+                </button>
+            </a>
+        </div>
 
-    <img src="/Assets/Gayathri-Image.jpeg" class="profile-image" alt="Gayathri Image">
-</div>
+        <img src="/Assets/Gayathri-Image.jpeg" class="profile-image" alt="Gayathri Image">
+    </div>
 
     <!--banner section ends-->
     <!-- About Us section -->
@@ -301,16 +303,16 @@ fetch("experience.json")
             <div class="about-section-wrapper">
                 <h1>Objective</h1>
                 <h3>Building digital experiences with creativity and precision</h3>
-      <p>
-        As a passionate Frontend Developer, my objective is to design and build
-        visually engaging, user-focused, and high-performing web interfaces.
-      </p>
-      <p>
-        I strive to turn creative concepts into seamless digital experiences
-        using modern tools like React, JavaScript, and Flutter, while
-        continuously learning and evolving with new technologies.
-      </p>
-           </div>
+                <p>
+                    As a passionate Frontend Developer, my objective is to design and build
+                    visually engaging, user-focused, and high-performing web interfaces.
+                </p>
+                <p>
+                    I strive to turn creative concepts into seamless digital experiences
+                    using modern tools like React, JavaScript, and Flutter, while
+                    continuously learning and evolving with new technologies.
+                </p>
+            </div>
         </div>
         <div class="image-section-wrapper">
             <img src="/Assets/laptop.jpg">
@@ -348,7 +350,7 @@ fetch("experience.json")
                     <div class="javascript">
                     </div>
                 </div>
-                 <div class="javascript-wrapper">
+                <div class="javascript-wrapper">
                     <h6>ReactJs</h6>
                     <p>80%</p>
                 </div>
@@ -356,7 +358,7 @@ fetch("experience.json")
                     <div class="javascript">
                     </div>
                 </div>
-                 <div class="javascript-wrapper">
+                <div class="javascript-wrapper">
                     <h6>Flutter</h6>
                     <p>70%</p>
                 </div>
@@ -409,9 +411,9 @@ fetch("experience.json")
     <div class="contact-wrapper">
         <i class="fa-regular fa-user"></i>
         <h1> get in touch</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit repellat perferendis vel qui. Mollitia est
-            ipsum, aliquam placeat molestias minima, quas corporis nulla magnam odit porro necessitatibus, nesciunt
-            omnis quaerat.</p>
+        <p>I’m always excited to connect with like-minded professionals, collaborators, or potential clients.
+            Whether you have a project idea, an opportunity, or just want to say hello, feel free to reach out.
+            Let’s create something amazing together!</p>
         <a href="#getintouch-wrapper">
             <button type="button">Get in touch</button>
     </div>
